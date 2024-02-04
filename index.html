@@ -44,14 +44,29 @@
             margin: 0 auto;
         }
 
-        .image-container img:active {
-            transform: scale(0.55); /* Riduzione delle dimensioni durante il tocco su touchscreen */
+        .image-container img.clicked {
+            transform: scale(0.95); /* Riduzione delle dimensioni durante il tocco su touchscreen */
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var images = document.querySelectorAll(".image-container img");
+
+            images.forEach(function(image) {
+                image.addEventListener("touchstart", function() {
+                    this.classList.add("clicked");
+                });
+
+                image.addEventListener("touchend", function() {
+                    this.classList.remove("clicked");
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <div id="top-image">
-        <img src="LEVANTE.jpg" alt="Levante">
+        <img src="levante.png" alt="Levante">
     </div>
 
     <div id="container">
