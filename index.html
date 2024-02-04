@@ -41,40 +41,15 @@
             height: auto;
             display: block;
             margin: 0 auto;
+            transition: transform 0.1s; /* Aggiunta dell'animazione di trasformazione */
         }
 
-        #dropdown {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            z-index: 1;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            padding: 12px 16px;
-            z-index: 1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
+        .image-container img:active {
+            transform: scale(0.95); /* Riduzione delle dimensioni durante il clic */
         }
     </style>
 </head>
 <body>
-    <div id="dropdown" class="dropdown">
-        <span>Menu</span>
-        <div class="dropdown-content">
-            <p><a href="#">Prova</a></p>
-            <p><a href="#">Test</a></p>
-            <p><a href="#">Contatti</a></p>
-        </div>
-    </div>
-
     <div id="banner">
         <img src="levante.jpg" alt="Levante">
     </div>
@@ -82,7 +57,7 @@
     <div id="container">
         <div class="image-container">
             <a href="https://forms.gle/DcBU1XjLheubgf866">
-                <img src="gasolio.png" alt="Immagine 1">
+                <img src="gasolio.jpg" alt="Immagine 1">
             </a>
         </div>
 
@@ -93,7 +68,7 @@
         </div>
 
         <div class="image-container">
-            <a href="https://forms.gle/6LWEXoKU3ncEDVGJA">
+            <a href="https://forms.gle/E9SCmKfegZpUXcSM7">
                 <img src="rc.png" alt="Immagine 3">
             </a>
         </div>
