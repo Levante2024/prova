@@ -1,19 +1,55 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web App Semplice</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>La Tua Web App</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        #container {
+            width: 50%;
+            overflow-x: auto;
+        }
+
+        .image-container {
+            max-width: 50%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            width: 50%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <img src="gasolio.jpg" alt="Link 1" onclick="apriLink('https://forms.gle/BQ1uJWAUrVG3vEG8A')">
-        
-        <img src="rc.png" alt="Link 3" onclick="apriLink('https://forms.gle/k6Ht72q1emwXeuq19')">
+    <div id="container">
+        <div class="image-container">
+            <a href="https://forms.gle/DcBU1XjLheubgf866">
+                <img src="gasolio.jpg" alt="Immagine 1">
+            </a>
+        </div>
+
+        <div class="image-container">
+            <a href="https://forms.gle/qHAjUifsLvkqUzPMA">
+                <img src="diario di bordo.png" alt="Immagine 2">
+            </a>
+        </div>
+
+        <div class="image-container">
+            <a href="https://forms.gle/6LWEXoKU3ncEDVGJA">
+                <img src="rc.png" alt="Immagine 3">
+            </a>
+        </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
