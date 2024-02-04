@@ -9,18 +9,19 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #87CEEB; /* Colore azzurro */
+            background-color: #ffffff; /* Colore bianco per lo sfondo */
         }
 
-        #banner {
+        #top-image {
             width: 100%;
             text-align: center;
             margin-top: 20px;
         }
 
-        #banner img {
+        #top-image img {
             max-width: 80%;
             height: auto;
+            transition: transform 0.1s; /* Aggiunta dell'animazione di trasformazione */
         }
 
         #container {
@@ -41,16 +42,15 @@
             height: auto;
             display: block;
             margin: 0 auto;
-            transition: transform 0.1s; /* Aggiunta dell'animazione di trasformazione */
         }
 
         .image-container img:active {
-            transform: scale(0.95); /* Riduzione delle dimensioni durante il clic */
+            transform: scale(0.95); /* Riduzione delle dimensioni durante il tocco su touchscreen */
         }
     </style>
 </head>
 <body>
-    <div id="banner">
+    <div id="top-image">
         <img src="levante.jpg" alt="Levante">
     </div>
 
@@ -68,7 +68,7 @@
         </div>
 
         <div class="image-container">
-            <a href="https://forms.gle/E9SCmKfegZpUXcSM7">
+            <a href="https://forms.gle/6LWEXoKU3ncEDVGJA">
                 <img src="rc.png" alt="Immagine 3">
             </a>
         </div>
