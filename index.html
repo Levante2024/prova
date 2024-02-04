@@ -9,22 +9,35 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #87CEEB; /* Colore azzurro */
+        }
+
+        #banner {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #banner img {
+            max-width: 80%;
+            height: auto;
         }
 
         #container {
-            width: 50%;
+            width: 80%;
+            margin: 0 auto; /* Per centrare il contenitore */
             overflow-x: auto;
+            margin-top: 20px;
         }
 
         .image-container {
-            max-width: 50%;
-            height: auto;
-            margin: 20px 0;
+            text-align: center; /* Per centrare l'immagine */
+            max-width: 80%;
+            margin: 20px auto; /* Margin auto per centrare */
         }
 
         .image-container img {
-            width: 50%;
+            width: 100%; /* Fatto in modo che l'immagine occupi il 100% della larghezza del suo contenitore */
             height: auto;
             display: block;
             margin: 0 auto;
@@ -32,10 +45,14 @@
     </style>
 </head>
 <body>
+    <div id="banner">
+        <img src="levante.jpg" alt="Levante">
+    </div>
+
     <div id="container">
         <div class="image-container">
             <a href="https://forms.gle/DcBU1XjLheubgf866">
-                <img src="gasolio.jpg" alt="Immagine 1">
+                <img src="gasolio.png" alt="Immagine 1">
             </a>
         </div>
 
