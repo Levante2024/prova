@@ -47,9 +47,16 @@
         .image-container img.clicked {
             transform: scale(0.95); /* Riduzione delle dimensioni durante il tocco su touchscreen */
         }
+
+        /* Aggiunta stile per effetto sfocatura */
+        #container.blur {
+            filter: blur(5px);
+            transition: filter 0.5s;
+        }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            var container = document.getElementById("container");
             var images = document.querySelectorAll(".image-container img");
 
             images.forEach(function(image) {
@@ -60,6 +67,36 @@
                 image.addEventListener("touchend", function() {
                     this.classList.remove("clicked");
                 });
+
+                // Aggiunta dell'evento di clic specifico per "diario di bordo.png"
+                if (image.src.includes("diario di bordo.png")) {
+                    image.addEventListener("click", function() {
+                        // Aggiungi la classe "blur" al contenitore per l'effetto sfocatura
+                        container.classList.add("blur");
+
+                        // Sostituisci l'immagine e aggiungi nuove immagini visibili
+                        image.src = "foto.png";
+                        var newImage = document.createElement("img");
+                        newImage.src = "diario.png";
+                        newImage.alt = "Nuova Immagine";
+                        newImage.classList.add("clicked"); // Aggiungi la classe per l'animazione
+                        this.parentNode.appendChild(newImage);
+
+                        // Aggiungi l'evento di clic alle nuove immagini
+                        newImage.addEventListener("touchstart", function() {
+                            this.classList.add("clicked");
+                        });
+
+                        newImage.addEventListener("touchend", function() {
+                            this.classList.remove("clicked");
+                        });
+
+                        // Aggiungi l'apertura del link al clic sulla nuova immagine
+                        newImage.addEventListener("click", function() {
+                            window.location.href = "https://forms.gle/gaPnWt1oB7YCW9AV7";
+                        });
+                    });
+                }
             });
         });
     </script>
@@ -77,7 +114,7 @@
         </div>
 
         <div class="image-container">
-            <a href="https://forms.gle/qHAjUifsLvkqUzPMA">
+            
                 <img src="diario di bordo.png" alt="Immagine 2">
             </a>
         </div>
